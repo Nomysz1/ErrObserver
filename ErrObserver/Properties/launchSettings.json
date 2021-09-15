@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ErrObserver": {
+      "commandName": "Project",
+      "commandLineArgs": "--filepath C:\\Test\\ --extension * --emailAddr szkaminski@tuchola.pl --smtpPort 587 --smtpHost smtp.tuchola.pl --ssl 0 --to simonarch12@gmail.com"
+    }
+  }
+}
