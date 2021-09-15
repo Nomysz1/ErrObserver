@@ -67,6 +67,7 @@ _ReSharper*/
 
 # Click-Once directory
 publish/
+properties/
 
 # Publish Web Output
 *.Publish.xml
