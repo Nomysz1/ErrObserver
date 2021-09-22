@@ -21,7 +21,7 @@ namespace ErrObserver
         }
         private string returnPattern()
         {
-            return String.Concat("." + this.Extension);
+            return String.Concat("*." + this.Extension);
         }
 
         public void createInstanceOfEmailAccount(string emailAddr, SecureString secureString)
@@ -34,7 +34,8 @@ namespace ErrObserver
             var isDirectoryStillAvaliable = Directory.Exists(this.dirPath);
             if (isDirectoryStillAvaliable)
             {
-                var dirWatcher = new FileSystemWatcher(this.dirPath);
+                var pattern = returnPattern();
+                var dirWatcher = new FileSystemWatcher(this.dirPath, pattern);
                 dirWatcher.Created += FileWatcher_Created;
                 dirWatcher.EnableRaisingEvents = true;
             }
