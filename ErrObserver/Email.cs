@@ -63,7 +63,7 @@ namespace ErrObserver
                 IsBodyHtml = true
             };
             
-            message.To.Add("simonarch12@gmail.com");
+            message.To.Add(this.To);
             var attachment = new Attachment(filePath, MediaTypeNames.Text.Plain);
             message.Attachments.Add(attachment);
             smtpClient.Send(message);
